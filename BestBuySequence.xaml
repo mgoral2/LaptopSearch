@@ -1,0 +1,192 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BestBuySequence" this:BestBuySequence.in_ProductName="Dell G15 Gaming Laptop" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ProductName" Type="InArgument(x:String)" />
+    <x:Property Name="out_Name" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Price" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Rating" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>850.4,1876.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>BestBuySequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BestBuySequence" sap:VirtualizedContainerService.HintSize="545.6,1812" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: Best Buy | Official Online Store | Shop Now &amp; Save" sap:VirtualizedContainerService.HintSize="483.2,1700" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="2ebd2442-c681-42a9-808c-73b1ed77c301" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1483.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT gh-search-input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" Text="[in_ProductName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/" DesignTimeRectangle="298, 179, 468, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT gh-search-input'" FullSelectorArgument="&lt;webctrl id='gh-search-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gh-search-input' tag='INPUT' type='text' class='search-input' aaname='' /&gt;" Guid="0b5da7b9-1cf5-45f2-bc57-50902fd1b32c" ImageBase64="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" InformativeScreenshot="1ddc052ff13407e1c8b805fb64ab2492.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Best Buy | Official Online Store | Shop Now &amp;amp; Save' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/" DesignTimeRectangle="765, 179, 32, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='header-search-button' aaname='submit search' /&gt;" Guid="37d50815-62ef-4a74-bfe0-e1f9104333df" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAsCAYAAAANUxr1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGUSURBVFhH7ZjNbYMwFIC5cgqLIE49h1OvjEAG6A4JEzACIwR1gFx7qZRBemCDuP0snlQqip+JAm7FJz3JsZ/x5x8CIoqeLyaoGK1cM8yKvL59mKeX93CE4HYzQ6m+flVYqaCEYBNysQm5+F9CXdeZtm3N6XSyQZm6e5gldL1eTZ7nX8+baDRoI2cO3kJ1XdtBd7udOR6Pg4EpU0cbOU3T9C16vIQYgIHKspzcGtrImSOlFmL2IqOlKArbx2f71EL7/d5uhc+hJZc+nCktKiEuzEw5H77Qh77aiaiEzuez99ILstVcQ4NKSGY5F5/V/ZtCwW1ZcIcauO2TJFFfGMilD321qIVk6Q+HQ1/j5qF/jCCPDqSmVoq2NE1tblVVfa0OLyEQKbaCV47vs6dMHW3kxHFsyw9bIYEBOBcMOha0kcNKZVlmpbQP2VlCAgNyO3MnEZR/bqVIIaqRuktIC1Kyoi6pRYQEeUeaulMXFQKkeCX5jcWFXGxCLjYhF5uQi6CEgvqkF9RHz9HPwoMfIcRo5WpxMZ8o9eS7nI5OLAAAAABJRU5ErkJggg==" InformativeScreenshot="5f36ec82a83ff129e05aa40fbea25c2e.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Best Buy | Official Online Store | Shop Now &amp;amp; Save' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Dell -'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/site/searchpage.jsp?st=dell+laptop&amp;_dyncharset=UTF-8&amp;_dynSessConf=&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys" DesignTimeRectangle="698, 368, 331, 33" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Dell -'" FullSelectorArgument="&lt;webctrl aaname='Dell - Inspiron 14.0&amp;quot; 2-in-1 Touch Laptop - 13th Gen Intel Core *' parentid='shop-sku-list-item-9781528' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dell - Inspiron 14.0&amp;quot; 2-in-1 Touch Laptop - 13th Gen Intel Core *' parentid='shop-sku-list-item-9781528' tag='A' type='' class='' /&gt;" Guid="ee33d7ab-c078-4e18-a0b8-b19c31534aeb" ImageBase64="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" InformativeScreenshot="2d5c517e1b4be6f15a147c0d3eb27c15.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='dell laptop - Best Buy' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1053, 267, 50, 30" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;webctrl class='sort-by-title' parentid='shop-product-list-48260381' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='sort-by-title' parentid='shop-product-list-48260381' tag='SPAN' type='' aaname='Sort By: ' check:innerText='Sort By:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAiCAYAAAAUAipQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGhSURBVFhH7Zk9bsMwDIU7ZOyWM2TLlIN48ZKjZMiQI3Tp2smAAW8ZMvUUdoOeoUXvEFbUj2VLlBw7KFAReoAGg5LIj09yAOcJmCqDpaSv7x9+YAj18vrGD+x8eYf245MfGLp1uzG8YwiGymCpKIOlpgyWmgJgDRTPa1j1Yw+VjixVVa6hqPWDJzefGNsTtDq6RATYFQ5bp4h6/3CiabAdHDr9KITzV2Wjn+aLAMMkhENdA5WbuO/wcD42RhRZn2AjYggTnmvkg9lmqkZvjlcdQCmHw42KOBZzqD3uxnEsoi+YXr/EsR6mE01y8xk3MUZAhl8esljbadsxortCthDtGBGPg9lccoyOoWqWWT/aS9d5P9hIA+tlh/zjhC4+BkYcxWGe3iUxN3KajHww3IBYaB35K8fcNe4+ak5RmgbGFXh5OEVIl2yS6TsWA6dEgBEnQ+Z1T8u8O6bg7Jn3C1VJTHyYjAYzd8ErTMrNhyOwh/sToPe9E+w/KtCwgJIB847/hBJybJ4yWGrKYKkJwVh+fmP7wZTtJ24Uyz8ljJiCAfwCHR0a5VY6w2gAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Verification target" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Model'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" TextString="[out_Name]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/site/dell-inspiron-14-0-2-in-1-touch-laptop-13th-gen-intel-core-i7-16gb-memory-1tb-ssd-platinum-silver/6539910.p?skuId=6539910" DesignTimeRectangle="918, 449, 367, 120" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Dell -'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='heading-5 v-fw-regular' /&gt;" Guid="65ccf86a-7066-4f97-a927-ea960d8a8b64" InformativeScreenshot="cb03ceb8c5e711b6691c8995a7f01604.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dell Inspiron 14.0&amp;quot; 2-in-1 Touch Laptop 13th Gen Intel Core i7 16GB Memory 1TB SSD Platinum Silver i7430-7374SLV-PUS - Best Buy' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="918, 577, 38, 16" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl parentid='shop-product-title-84874826' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='shop-product-title-84874826' tag='STRONG' type='' class='' aaname='Model' check:innerText='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAUCAYAAAD7s6+GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE9SURBVEhL7ZRBCsIwEEW9iEt33sBVVx6jm268iHTRq0jxMG2PM+Ynk+QnjaIQRKEfAs4kf/ImU9zJn2gDra0NtLa+BzoPcmoGmTR8pak/y6lfNHIi0EWuzVH2xWK6d7jITTMfqzro4SjtqCkvXGLyPwR6lmt/kX1315wTjG0PWAa9S2vhdWWe2ByWqTvmoKmfwd4DnVGAgZA3sb3Y593rc7Fbx7CogVoa+mkFUAcZJ+f2fZyAasMFUHdpKIKDAGDQ0bz6aowRDhetXpg9JT9y6klAkX8GyqYATaBFkKzRfHTWr3DWryNPFu2/MXr89uOnz6D2i64ajfoAVA+bOBRkUHv2xTdqz8Za/puMzbmY/124uQTU1no2eii/LAGFHGwYW+kF/R588CdTUHi/aC8B1ToE+tvaQGtrA60rkQc7/dzracD1vQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Model'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" TextString="[out_Price]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/site/dell-inspiron-14-0-2-in-1-touch-laptop-13th-gen-intel-core-i7-16gb-memory-1tb-ssd-platinum-silver/6539910.p?skuId=6539910" DesignTimeRectangle="918, 577, 118, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$999.99'" FullSelectorArgument="&lt;webctrl parentid='pricing-price-39250403' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pricing-price-39250403' tag='SPAN' type='' class='' /&gt;" Guid="8057c2ae-a9fb-4ad2-a464-608fb06da320" InformativeScreenshot="9ea594607216f23d73208a8289b7243e.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dell Inspiron 14.0&amp;quot; 2-in-1 Touch Laptop 13th Gen Intel Core i7 16GB Memory 1TB SSD Platinum Silver i7430-7374SLV-PUS - Best Buy' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="918, 475, 38, 16" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl parentid='shop-product-title-85049469' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='shop-product-title-85049469' tag='STRONG' type='' class='' aaname='Model' check:innerText='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAUCAYAAAD7s6+GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE9SURBVEhL7ZRBCsIwEEW9iEt33sBVVx6jm268iHTRq0jxMG2PM+Ynk+QnjaIQRKEfAs4kf/ImU9zJn2gDra0NtLa+BzoPcmoGmTR8pak/y6lfNHIi0EWuzVH2xWK6d7jITTMfqzro4SjtqCkvXGLyPwR6lmt/kX1315wTjG0PWAa9S2vhdWWe2ByWqTvmoKmfwd4DnVGAgZA3sb3Y593rc7Fbx7CogVoa+mkFUAcZJ+f2fZyAasMFUHdpKIKDAGDQ0bz6aowRDhetXpg9JT9y6klAkX8GyqYATaBFkKzRfHTWr3DWryNPFu2/MXr89uOnz6D2i64ajfoAVA+bOBRkUHv2xTdqz8Za/puMzbmY/124uQTU1no2eii/LAGFHGwYW+kF/R588CdTUHi/aC8B1ToE+tvaQGtrA60rkQc7/dzracD1vQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Model'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="2ebd2442-c681-42a9-808c-73b1ed77c301" TextString="[out_Rating]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.bestbuy.com/site/dell-inspiron-14-0-2-in-1-touch-laptop-13th-gen-intel-core-i7-16gb-memory-1tb-ssd-platinum-silver/6539910.p?skuId=6539910" DesignTimeRectangle="1001, 522, 18, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'4.7'" FullSelectorArgument="&lt;webctrl aaname='4.7' parentid='user-generated-content-ugc-stats-23061095' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='user-generated-content-ugc-stats-23061095' tag='SPAN' type='' class='ugc-c-review-average font-weight-medium order-1' /&gt;" Guid="dbd3603e-a2b6-49b9-8be1-aee581cdf629" InformativeScreenshot="31cfb7721e7d39dd7b1ec05dcc47e1a1.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Dell Inspiron 14.0&amp;quot; 2-in-1 Touch Laptop 13th Gen Intel Core i7 16GB Memory 1TB SSD Platinum Silver i7430-7374SLV-PUS - Best Buy' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="918, 475, 38, 16" ElementType="Text" FriendlyName="'Model'" FullSelectorArgument="&lt;webctrl parentid='shop-product-title-85049469' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='shop-product-title-85049469' tag='STRONG' type='' class='' aaname='Model' check:innerText='Model' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAUCAYAAAD7s6+GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE9SURBVEhL7ZRBCsIwEEW9iEt33sBVVx6jm268iHTRq0jxMG2PM+Ynk+QnjaIQRKEfAs4kf/ImU9zJn2gDra0NtLa+BzoPcmoGmTR8pak/y6lfNHIi0EWuzVH2xWK6d7jITTMfqzro4SjtqCkvXGLyPwR6lmt/kX1315wTjG0PWAa9S2vhdWWe2ByWqTvmoKmfwd4DnVGAgZA3sb3Y593rc7Fbx7CogVoa+mkFUAcZJ+f2fZyAasMFUHdpKIKDAGDQ0bz6aowRDhetXpg9JT9y6klAkX8GyqYATaBFkKzRfHTWr3DWryNPFu2/MXr89uOnz6D2i64ajfoAVA+bOBRkUHv2xTdqz8Za/puMzbmY/124uQTU1no2eii/LAGFHGwYW+kF/R588CdTUHi/aC8B1ToE+tvaQGtrA60rkQc7/dzracD1vQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;pause&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1382, 744" BrowserType="Firefox" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAZ1JREFUWAntVjtLw2AUPUljpbUPbKXUUotSBEE3QXQRnQSL4OjgrJO7o79A0MlJdBH32kGLUxcfdAqWItIHVMHHIGjTkNR+JhFCH8mWL0VIhpDccznn3JP7QQDnchLocwKMmT4pzR+AkYNmuCV1Tsj1GCBkj0U1fY6hQgpsw2uJkBlJY7LCtWOEbA2gnE4j8LAMRnS3Y7SedQPkZc2Lcv4KQX4BkFhagt28mgFSTQ1DqmUR4GeBZncP1XeOvC35INRy8PPTQIuqmBE5B/H9Gv6CIk6McOo1FqwU6Ze4Op1ty2YWZYeBr28Xjs5CyPMes37L6/oxVJn3j8M4PA0h4GuhmH3CoJv+UnYkkExI2oTxqKyI27OUHQlsrn9icU5ALCIrRvpgQB0/EftLQYvChpvyCVw2yJhLqDuwAyn6at5CF2GZePEC4tguxMQzXSljdu0UMBP3J5Cj2xCTVeM2elX9GDLjdxmQkQ3Up0pAz38KNQe6AVWBid/eoBleRX3m0S4ThqOSysooyMclXIIhblkcLc+PZVwOkZPAv03gF0kuZPB88QLzAAAAAElFTkSuQmCC" InformativeScreenshot="892565ac1c4c6db4691c92d1e177917e.png" Selector="&lt;html app='firefox.exe' title='Best Buy | Official Online Store | Shop Now &amp;amp; Save' /&gt;" Url="https://www.bestbuy.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
