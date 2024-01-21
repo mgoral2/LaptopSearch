@@ -1,0 +1,70 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MCName&Sequence_1",
+        "MCRating&Sequence_1",
+        "MCPrice&Sequence_1",
+        "BBName&Sequence_1",
+        "BBRating&Sequence_1",
+        "BBPrice&Sequence_1",
+        "AmazonName&Sequence_1",
+        "AmazonRating&Sequence_1",
+        "AmazonPrice&Sequence_1",
+        "LaptopName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "AmazonSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Name",
+        "out_Rating",
+        "out_Price",
+        "in_ProductName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "BestBuySequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Rating",
+        "out_Price",
+        "out_Name",
+        "in_ProductName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MicrocenterSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_Name",
+        "out_Rating",
+        "out_Price",
+        "in_ProductName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
